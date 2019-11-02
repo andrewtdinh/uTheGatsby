@@ -22,6 +22,7 @@ export default () => {
   return (
     <Layout>
       <h1>Hello from page 3</h1>
+      <h3>Image file data</h3>
       <table>
         <thead>
           <tr>
