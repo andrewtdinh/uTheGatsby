@@ -43,6 +43,7 @@ test/**/public
 .gatsby-context.js
 .DS_Store
 public/
+*/public
 node_modules/
 .cache/
 */.cache/
