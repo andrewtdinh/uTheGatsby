@@ -17,7 +17,7 @@ const PostTemplate = path.resolve('./src/templates/post-template.js')
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  const result = await graphql`
+  const result = await graphql(`
     {
       allMarkdownRemark {
         edges {
@@ -29,7 +29,7 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
-  `
+  `)
 
   const posts = result.data.allMarkdownRemark.edges
   posts.forEach(({ node: post }) => {
