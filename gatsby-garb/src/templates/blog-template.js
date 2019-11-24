@@ -44,10 +44,23 @@ export default ({ data, pageContext }) => {
               <p>{node.excerpt}</p>
             </div>
           ))}
+
+      {/* Pagination Links */}
+      <div>
+        {!isFirstPage && (
+          <Link to={prevPage} rel="prev">
+            Prev Page
+          </Link>
+        )}
+        {!isLastPage && (
+          <Link to={nextPage} rel="next">
+            Next Page
+          </Link>
+        )}
+      </div>
       </div>
     </Layout>
   )}
-
 export const query = graphql`
   query($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
