@@ -46,7 +46,13 @@ export default ({ data, pageContext }) => {
           ))}
 
       {/* Pagination Links */}
-      <div>
+      <div style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-around",
+        maxWidth: 300,
+        margin: "0 auto",
+      }}>
         {!isFirstPage && (
           <Link to={prevPage} rel="prev">
             Prev Page
