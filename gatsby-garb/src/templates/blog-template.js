@@ -58,7 +58,7 @@ export default ({ data, pageContext }) => {
           </Link>
         ))}
         {!isLastPage && (
-          <Link to={nextPage} rel="next" style={{ marginLeft: '1rem'}}>
+          <Link to={nextPage} rel="next">
             Next Page
           </Link>
         )}
