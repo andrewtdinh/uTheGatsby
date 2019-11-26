@@ -43,9 +43,10 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
+  const postsPerPage = 2;
+  const totalPages = Math.ceil(postsArr.length / postsPerPage);
+
   posts.forEach((_, index, postsArr) => {
-    const totalPages = postsArr.length;
-    const postsPerPage = 1;
     const currentPage = index + 1;
     const isFirstPage = index === 0;
     const isLastPage = currentPage === totalPages;
