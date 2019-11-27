@@ -19,8 +19,13 @@ const Header = ({ siteTitle }) => (
       }}
     >
       {/* Title and Logo area */}
-      <span style={{display: "flex", flexDirection: 'row'}}>
-        <img src={gatsbyLogo} style={{width: "2rem", height: "2rem"}}/>
+      <span style={{display: "flex", alignItems: 'center'}}>
+        <img src={gatsbyLogo} alt="Gatsby Garb Logo" style={{
+          width: "50px",
+          margin: "0 10px",
+          border: "3px solid orange",
+          borderRadius: "50%"
+        }}/>
         <h1 style={{ margin: 0 }}>
           <Link
             to="/"
