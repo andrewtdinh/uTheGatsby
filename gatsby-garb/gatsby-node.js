@@ -29,6 +29,13 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      allContentfulProduct {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
     }
   `)
 
