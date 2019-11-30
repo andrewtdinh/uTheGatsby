@@ -14,8 +14,12 @@ const ProductTemplate = ({ data: { contentfulProduct } }) => (
       }}
     >
       {/* Product Info */}
-      <h2>{contentfulProduct.name} - <span style={{ color: "#ccc"}}
-      >Added on {contentfulProduct.createdAt}</span></h2>
+      <h2>
+        {contentfulProduct.name} -{' '}
+        <span style={{ color: "#ccc" }}>
+          Added on {contentfulProduct.createdAt}
+        </span>
+      </h2>
       <p>{contentfulProduct.description}</p>
       <Img fluid={contentfulProduct.image.fluid} />
     </div>
