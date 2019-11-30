@@ -21,7 +21,10 @@ const ProductTemplate = ({ data: { contentfulProduct } }) => (
         </span>
       </h2>
       <p>{contentfulProduct.description}</p>
-      <Img fluid={contentfulProduct.image.fluid} />
+      <Img
+        style={{ margin: "0 auto", maxWidth: '600px' }}
+        fluid={contentfulProduct.image.fluid} 
+      />
     </div>
   </Layout>
 )
