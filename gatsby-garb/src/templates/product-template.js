@@ -6,7 +6,13 @@ import Layout from '../components/layout';
 
 const ProductTemplate = ({ data: { contentfulProduct } }) => (
   <Layout>
-    <div>
+    <div
+      style={{ 
+        marginLeft: "0 auto",
+        width: "100%",
+        textAlign: "center"
+      }}
+    >
       {/* Product Info */}
       <h2>{contentfulProduct.name} - <span style={{ color: "#ccc"}}
       >Added on {contentfulProduct.createdAt}</span></h2>
