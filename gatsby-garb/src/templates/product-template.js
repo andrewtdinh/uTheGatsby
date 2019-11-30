@@ -14,12 +14,14 @@ const ProductTemplate = ({ data: { contentfulProduct } }) => (
       }}
     >
       {/* Product Info */}
-      <h2>
-        {contentfulProduct.name} -{' '}
-        <span style={{ color: "#ccc" }}>
+      <div>
+        <h2 style={{ display: "inline-block" }}>
+          {contentfulProduct.name} -
+        </h2>
+        <span style={{ display: "inline-block", color: "#ccc", marginLeft: "4px" }}>
           Added on {contentfulProduct.createdAt}
         </span>
-      </h2>
+      </div>
       <p>{contentfulProduct.description}</p>
       <Img
         style={{ margin: "0 auto", maxWidth: '600px' }}
