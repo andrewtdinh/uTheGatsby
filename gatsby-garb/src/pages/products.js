@@ -11,9 +11,18 @@ const Products = ({ data: { allContentfulProduct }}) => (
       <h2>Garb Products</h2>
       {allContentfulProduct.edges.map(({ node: product }) => (
         <div key={product.id}>
-          <Link to={`/products/${product.slug}`} style={{ textDecoration: "none"}}>
+          <Link 
+            to={`/products/${product.slug}`} 
+            style={{ 
+              textDecoration: "none",
+              color: "#551a8b"
+            }}
+          >
             <h3 style={{ marginTop: '2rem' }}>
-            {product.name} • {` `}<span>${product.price}</span>
+              {product.name} • {` `}
+              <span style={{ fontSize: "1.2rem", fontWeight: 300, color: "#f60" }}>
+                ${product.price}
+              </span>
             </h3>
           </Link>
           <Img 
