@@ -25,6 +25,7 @@ const Products = ({ data: { allContentfulProduct }}) => (
 );
 
 export const query = graphql`
+{
   allContentfulProduct {
     edges { 
       node {
@@ -39,6 +40,7 @@ export const query = graphql`
       }
     }
   }
+}
 `
 
 export default Products;
