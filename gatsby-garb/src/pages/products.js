@@ -15,7 +15,7 @@ const Products = ({ data: { allContentfulProduct }}) => (
             <h3>{product.name}</h3>
           </Link>
           <Img 
-            style={{ maxWidth: 600}}
+            style={{ maxWidth: 400}}
             fluid={product.image.fluid}
           />
         </div>
@@ -33,7 +33,7 @@ export const query = graphql`
         slug
         name
         image {
-          fluid(maxWidth: 800) {
+          fluid(maxWidth: 400) {
             ...GatsbyContentfulFluid
           }
         }
