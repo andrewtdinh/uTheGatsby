@@ -8,11 +8,11 @@ const Products = ({ data: { allContentfulProduct }}) => (
   <Layout>
     <div>
       {/* Product List */}
+      <h2>Garb Products</h2>
       {allContentfulProduct.edges.map(({ node: product }) => (
         <div key={product.id}>
-          <h2>Garb Products</h2>
           <Link to={`/products/${product.slug}`}>
-            <h3>{product.name}</h3>
+            <h3 style={{ marginTop: '2rem' }}>{product.name}</h3>
           </Link>
           <Img 
             style={{ maxWidth: 400}}
