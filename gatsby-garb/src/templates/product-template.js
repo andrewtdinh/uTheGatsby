@@ -22,6 +22,7 @@ const ProductTemplate = ({ data: { contentfulProduct } }) => (
           Added on {contentfulProduct.createdAt}
         </span>
       </div>
+      <h4>${contentfulProduct.price}</h4>
       <p>{contentfulProduct.description}</p>
       <Img
         style={{ margin: "0 auto", maxWidth: '600px' }}
