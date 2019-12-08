@@ -32,9 +32,16 @@ const ProductTemplate = ({ data: { contentfulProduct }, location }) => {
           data-item-image={contentfulProduct.image.file.url}
           data-item-name={contentfulProduct.name}
           data-item-url={location.pathname}
-          style={{ marginBottom: "2rem" }}
-        >
-          Add to Cart
+          style={{ 
+            marginBottom: "2rem", 
+            background: "darkorange",
+            color: "white",
+            padding: "0.3em",
+            cursor: "pointer",
+            borderRadius: "5px"
+          }}
+      >
+        Add to Cart
         </button>
         <Img
           style={{ margin: "0 auto", maxWidth: '600px' }}
