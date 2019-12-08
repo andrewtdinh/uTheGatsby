@@ -4,7 +4,7 @@ import Img from 'gatsby-image';
 
 import Layout from '../components/layout';
 
-const ProductTemplate = ({ data: { contentfulProduct } }) => (
+const ProductTemplate = ({ data: { contentfulProduct }, location }) => (
   <Layout>
     <div
       style={{ 
@@ -29,6 +29,8 @@ const ProductTemplate = ({ data: { contentfulProduct } }) => (
         data-item-id={contentfulProduct.slug}
         data-item-price={contentfulProduct.price}
         data-item-image={contentfulProduct.image.file.url}
+        data-item-name={contentfulProduct.name}
+        data-item-url={location.pathname}
       >
         Add to Cart
       </button>
