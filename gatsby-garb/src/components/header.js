@@ -39,13 +39,17 @@ const Header = ({ siteTitle }) => (
         </h1>
       </span>
       {/** Shopping Cart Summary */}
-      <div className="snipcart-summary snipcart-checkout">
+      <div 
+        className="snipcart-summary snipcart-checkout"
+        style={{ color: 'white', cursor: 'pointer'}}
+      >
         <div><strong>My Cart</strong></div>
         <div>
-          <span className="snipcart-total-items"></span>{" "}Items in Cart
+          <span className="snipcart-total-items" style={{ fontWeight: "bold" }}
+          />{" "}Items in Cart
         </div>
         <div>Total price{' '}
-          <span className="snipcart-total-price" />
+          <span className="snipcart-total-price" style={{ fontWeight: "bold" }}/>
         </div>
       </div>
     </div>
