@@ -38,6 +38,16 @@ const Header = ({ siteTitle }) => (
           </Link>
         </h1>
       </span>
+      {/** Shopping Cart Summary */}
+      <div className="snipcart-summary snipcart-checkout">
+        <div><strong>My Cart</strong></div>
+        <div>
+          <span className="snipcart-total-items"></span>{" "}Items in Cart
+        </div>
+        <div>Total price{' '}
+          <span className="snipcart-total-price" />
+        </div>
+      </div>
     </div>
   </header>
 )
