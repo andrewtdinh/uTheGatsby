@@ -32,6 +32,7 @@ const ProductTemplate = ({ data: { contentfulProduct }, location }) => {
           data-item-image={contentfulProduct.image.file.url}
           data-item-name={contentfulProduct.name}
           data-item-url={location.pathname}
+          style={{ marginBottom: "2rem" }}
         >
           Add to Cart
         </button>
