@@ -24,6 +24,14 @@ const ProductTemplate = ({ data: { contentfulProduct } }) => (
       </div>
       <h4>${contentfulProduct.price}</h4>
       <p>{contentfulProduct.description}</p>
+      <button 
+        className="snipcart-add-item"
+        data-item-id={contentfulProduct.slug}
+        data-item-price={contentfulProduct.price}
+        data-item-image={contentfulProduct.image.file.url}
+      >
+        Add to Cart
+      </button>
       <Img
         style={{ margin: "0 auto", maxWidth: '600px' }}
         fluid={contentfulProduct.image.fluid} 
@@ -42,6 +50,9 @@ export const query = graphql`
       image {
         fluid(maxWidth: 800) {
           ...GatsbyContentfulFluid
+        }
+        file {
+          url
         }
       }
     }
